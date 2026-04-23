@@ -26,11 +26,11 @@
                 <button type="submit" id="add-btn"><i class="fas fa-plus"></i></button>
             </div>
         </form>
-        <form id = "edit-form">
+        <form id="edit-form" class="hide">
             <p>Edit task: </p>
-            <div class = "form-control"> 
+            <div class="form-control">
                 <input type="text" id="edit-input" placeholder="Edit task">
-                <button type="submit"> 
+                <button type="submit">
                     <i class="fa-solid fa-check-double"></i>
                 </button>
             </div>
@@ -39,14 +39,14 @@
         <div id="toolbar">
             <div id="search">
                 <h4>Search: </h4>
-                <form>  
+                <form>
                     <input type="text" id="search-input" placeholder="Search tasks">
-                    <button id = "erase-button"><i class="fa-solid fa-delete-left"></i></button>
+                    <button id="erase-button"><i class="fa-solid fa-delete-left"></i></button>
                 </form>
             </div>
             <div id="filters">
                 <h4>Filters: </h4>
-                <select id ="filter-select">    
+                <select id="filter-select">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="pending">Pending</option>
@@ -54,7 +54,19 @@
             </div>
         </div>
         <div id="todo-list">
-            <div id="todo">
+            <div class="todo done">
+                <h3>Estou fazendo alguma coisa...</h3>
+                <button class="finish-todo">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit-todo">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="remove-todo">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+            <div class="todo">
                 <h3>Estudar JavaScript</h3>
                 <button class="finish-todo">
                     <i class="fa-solid fa-check"></i>
@@ -69,4 +81,5 @@
         </div>
     </div>
 </body>
+
 </html>

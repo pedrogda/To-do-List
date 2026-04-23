@@ -1,0 +1,161 @@
+/* Geral */
+*{
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    font-family: Helvetica;
+    color: #333;
+    box-sizing: border-box; /* Para evitar que o padding e a borda sejam adicionados à largura total do elemento */
+}
+/* Estilização do corpo da página */
+body{ 
+    background-image:url("../img/Gemini_Generated_Image_rojkb5rojkb5rojk.png");
+    background-size: cover; /* Para garantir que a imagem de fundo cubra toda a área da página */
+
+
+
+}
+button{
+    background-color: #fdfdfd;
+    color: #102f5e;
+    border: 2px solid #102f5e;
+    padding: .3rem .6rem; /* Ajuste o preenchimento para um tamanho menor */
+    font-size: 1rem;
+    cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que é clicável */
+    display: flex; /* Para alinhar o conteúdo do botão usando flexbox */ /*Função display flex: Permite que o conteúdo do botão seja organizado usando flexbox, facilitando o alinhamento e a distribuição dos elementos dentro do botão. */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do botão */
+    align-items: center; /* Centraliza verticalmente o conteúdo do botão */
+    transition: 0.4s; /* Adiciona uma transição suave para as mudanças de estilo */
+}
+/* Estilização do botão quando o mouse estiver sobre ele */
+button:hover{
+    background-color: #102f5e;
+    color: #fdfdfd;
+}
+/* Estilização do ícone dentro do botão quando o mouse estiver sobre ele */
+button:hover > i{ /* O seletor > i seleciona o elemento <i> que é filho direto do botão */
+    color: #fdfdfd;
+}
+button i{
+    color: #102f5e;
+    font-weight: bold;
+    pointer-events: none; /* Impede que o ícone receba eventos de clique, permitindo que o clique seja registrado no botão */
+}
+input, select{
+    padding: 0.25rem 0.5rem;
+}
+/* Esconder Formulário de edição */
+.hide{
+    display: none;
+}
+/* Todo o header */
+.todo-container{
+    max-width: 450px;
+    margin: 4rem auto 0 ; /* Centraliza o container horizontalmente e adiciona uma margem superior de 3rem */
+    background-color: #fdfdfd;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.todo-container header{
+    text-align: center; /* Centraliza o texto dentro do header */
+    padding: 0 1rem 0 1rem;
+    border-bottom: 1px solid #CCC; /* Adiciona uma linha de separação abaixo do header */
+}
+
+/* Todo Form */
+/* FUnção da hashtag # é selecionar um elemento pelo seu id. No caso, #todo-form seleciona o elemento com o id "todo-form" e #edit-form seleciona o elemento com o id "edit-form". */
+#todo-form, #edit-form{ /* Estilização do formulário de adição e edição de tarefas */
+    padding: 1rem;
+    border-bottom: 1px solid #CCC; /* Adiciona uma linha de separação abaixo do formulário */
+}
+
+#todo-form p,
+#edit-form p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-control{
+    display: flex; /* Permite que os elementos dentro do formulário sejam organizados usando flexbox */
+}
+
+.form-control input{
+    margin-right: .3rem;
+
+}
+
+#cancel-btn{
+    margin-top: 1rem;
+}
+
+/* TODO toolbar */
+#toolbar{
+    padding: 1rem;
+    border-bottom: 1px solid #CCC; /* Adiciona uma linha de separação abaixo da barra de ferramentas */
+    display: flex; /* Permite que os elementos dentro da barra de ferramentas sejam organizados usando flexbox */
+}
+
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1px solid #CCC; /* Adiciona uma linha de separação à direita do campo de busca */
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%; /* Define a largura do campo de busca para 65% da largura total da barra de ferramentas */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos dentro do campo de busca em uma coluna */
+}
+
+#search form{
+    display: flex; /* Permite que os elementos dentro do formulário de busca sejam organizados usando flexbox */
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.5rem;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos dentro do filtro em uma coluna */
+}
+
+#filter select{
+    flex: 1; /* Permite que o elemento select ocupe todo o espaço disponível dentro do filtro */
+}
+
+/* TODO List */
+
+.todo{
+    display: flex;
+    justify-content: space-around; /* Distribui os itens da lista de tarefas com espaço igual entre eles */
+    align-items: center /* Alinha os itens da lista de tarefas verticalmente ao centro */;
+    padding: 1rem;
+    border-bottom: 1px solid #CCC; /* Adiciona uma linha de separação abaixo da lista de tarefas */
+    transition: .3s;
+}
+/* qual a diferença entre #todo h3 e #todo ?
+/* O seletor #todo h3 seleciona especificamente os elementos <h3> que estão dentro do elemento com o id "todo". Isso significa que as regras de estilo aplicadas a #todo h3 afetarão apenas os títulos das tarefas dentro da lista de tarefas, enquanto as regras de estilo aplicadas a #todo afetarão todo o item da lista de tarefas, incluindo o título e os botões. */
+.todo h3{
+    flex: 1; /* Permite que o título da tarefa ocupe todo o espaço disponível dentro do item da lista de tarefas */
+    font-size: 0.9rem;
+}
+
+.todo button{
+    margin-left: .4rem;
+}
+
+.done{
+    background-color: #395169;
+
+}
+
+.done h3{
+    color : #fdfdfd;
+    text-decoration: line-through; /* Adiciona um efeito de texto riscado para indicar que a tarefa foi concluída */
+    font-style: italic;
+}
